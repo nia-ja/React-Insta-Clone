@@ -1,0 +1,19 @@
+.footer-icons {
+    width: 100%;
+    padding: 15px 1.5%;
+    /* border: 1px solid blueviolet; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.footer-icon {
+    /* border: 1px solid orange; */
+    opacity: 2;
+    transform: scaleX(-1);
+    margin-right: 2%;
+    cursor: pointer;
+}
+.num-of-likes {
+    padding-left: 2%;
+    font-weight: bold;
+}

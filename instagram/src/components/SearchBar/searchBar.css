@@ -19,3 +19,17 @@
     border: 1px solid lightgrey;
     font-size: 1.6rem;
 }
+.search-bar input:focus {
+    outline: none;
+}
+.search-bar-icons {
+    width: 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.search-bar-icons img {
+    opacity: 0.9;
+}

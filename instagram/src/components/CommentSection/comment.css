@@ -1,0 +1,9 @@
+.comment {
+    width: 100%;
+    display: flex;
+    margin: 15px auto;
+}
+.comment .comment-username {
+    font-weight: bold;
+    margin-right: 1%;
+}
