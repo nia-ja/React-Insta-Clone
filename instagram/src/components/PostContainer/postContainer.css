@@ -1,5 +1,8 @@
-.post-container{
+.post-container {
     max-width: 750px;
     margin: 40px auto;
-    border: 1px solid red;
+    border: 1px solid lightgrey;
+}
+.post-container .post-image {
+    width: 100%;
 }
