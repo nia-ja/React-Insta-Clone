@@ -1,7 +1,13 @@
 .logo {
-    width: 20%;
+    min-width: 20%;
+    max-width: 40%;
 }
 
 .app-logo {
     max-height: 40px;
+}
+@media (max-width: 500px) {
+    .pic-logo{
+        display: none;
+    }
 }

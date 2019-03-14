@@ -1,8 +1,14 @@
 .post-container {
-    max-width: 650px;
-    margin: 40px auto;
+    max-width: 600px;
+    margin: 20px auto;
     border: 1px solid lightgrey;
+    background: white;
 }
 .post-container .post-image {
     width: 100%;
+}
+@media (max-width: 650px) {
+    .post-container {
+        margin: 40px 4%; 
+    }
 }

@@ -11,7 +11,7 @@ const PostContainer = (props) => {
             <PostHeader src={props.data.thumbnailUrl} alt={`${props.data.username} thumbnail`} username={props.data.username} />
             <img className="post-image" src={props.data.imageUrl} alt={`${props.data.username} post`}/>
             <PostFooter numberOfLikes={props.data.likes} />
-            <CommentSection comments={props.data.comments} />
+            <CommentSection comments={props.data.comments} date={props.data.timestamp} />
         </div>
     );
 }

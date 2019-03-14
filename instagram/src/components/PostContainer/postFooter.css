@@ -1,6 +1,6 @@
 .footer-icons {
     width: 100%;
-    padding: 15px 1.5%;
+    padding: 10px 1.5%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -13,10 +13,10 @@
     height: 35px;
 }
 .footer-heart-icon {
-    height: 35px;
+    height: 29px;
 }
 .footer-bubble-icon {
-    height: 30px;
+    height: 25px;
 }
 .num-of-likes {
     padding-left: 2%;
