@@ -1,7 +1,9 @@
 import React from "react";
 import Logo from './Logo';
 import './searchBar.css';
-
+import userIcon from '../../user_icon.svg';
+import compassIcon from '../../compass_icon.svg';
+import heartIcon from '../../heart_icon.svg';
 
 const SearchBar = () => {
     return (
@@ -9,9 +11,9 @@ const SearchBar = () => {
             <Logo />
             <input type="text" placeholder="Search" />
             <div className="search-bar-icons">
-                <img src="https://img.icons8.com/ios/30/000000/compass.png" alt="compass icon" />
-                <img src="https://img.icons8.com/ios/36/000000/hearts.png" alt="heart icon" />
-                <img src="https://img.icons8.com/ios/30/000000/gender-neutral-user.png" alt="user icon" />
+                <img className="search-bar-icon" src={compassIcon} alt="compass icon" />
+                <img className="search-bar-icon heart-icon" src={heartIcon} alt="heart icon" />
+                <img className="search-bar-icon user-icon" src={userIcon} alt="user icon" />
             </div>
         </div>
     );

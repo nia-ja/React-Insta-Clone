@@ -8,8 +8,8 @@ import CommentSection from "../CommentSection/CommentSection";
 const PostContainer = (props) => {
     return (
         <div className="post-container">
-            <PostHeader src={props.data.thumbnailUrl} alt="`${props.data.username} thumbnail`" username={props.data.username} />
-            <img className="post-image" src={props.data.imageUrl} alt="`${props.data.username} post image`"/>
+            <PostHeader src={props.data.thumbnailUrl} alt={`${props.data.username} thumbnail`} username={props.data.username} />
+            <img className="post-image" src={props.data.imageUrl} alt={`${props.data.username} post`}/>
             <PostFooter numberOfLikes={props.data.likes} />
             <CommentSection comments={props.data.comments} />
         </div>
