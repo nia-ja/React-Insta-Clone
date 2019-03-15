@@ -7,14 +7,30 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: dummyData
+      data: []
     }
   }
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ data: dummyData });
+    }, 3000);
+  }
+  
   render() {
     return (
       <div className="App">
         <SearchBar />
-        {this.state.data.map(elem => (<PostContainer data={elem} key={`${elem.timestamp}${elem.username}`} />))}
+        {this.state.data.length > 0 ? (
+          this.state.data.map(elem => (<PostContainer data={elem} key={`${elem.timestamp}${elem.username}`} />))
+        ) : (
+          <div class="semipolar-spinner">
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+          </div>
+        )}
       </div>
     );
   }
