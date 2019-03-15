@@ -3,6 +3,7 @@ import './postContainer.css';
 import PostHeader from './PostHeader';
 import PostFooter from './PostFooter';
 import CommentSection from "../CommentSection/CommentSection";
+import PropTypes from 'prop-types';
 
 
 const PostContainer = (props) => {
@@ -15,4 +16,16 @@ const PostContainer = (props) => {
         </div>
     );
 }
+
+PostContainer.propTypes = {
+    data: PropTypes.shape ({
+        username: PropTypes.string,
+        thumbnailUrl: PropTypes.string,
+        imageUrl: PropTypes.string,
+        likes: PropTypes.number,
+        timestamp: PropTypes.string,
+        comments: PropTypes.arrayOf(PropTypes.object)
+    })
+}
+
 export default PostContainer;
