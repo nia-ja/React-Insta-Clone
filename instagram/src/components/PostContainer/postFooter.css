@@ -7,18 +7,23 @@
 }
 .footer-icon {
     opacity: 2;
-    transform: scaleX(-1);
     margin-right: 2%;
     cursor: pointer;
     height: 35px;
 }
 .footer-heart-icon {
     height: 29px;
+    fill: blue;
 }
 .footer-bubble-icon {
     height: 25px;
+    transform: scaleX(-1);
+}
+.footer-likes {
+    display: flex;
 }
 .num-of-likes {
     padding-left: 2%;
     font-weight: bold;
+    margin-right: 1%;
 }

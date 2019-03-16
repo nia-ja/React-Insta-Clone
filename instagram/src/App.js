@@ -23,12 +23,12 @@ class App extends Component {
         {this.state.data.length > 0 ? (
           this.state.data.map(elem => (<PostContainer data={elem} key={`${elem.timestamp}${elem.username}`} />))
         ) : (
-          <div class="semipolar-spinner">
-            <div class="ring"></div>
-            <div class="ring"></div>
-            <div class="ring"></div>
-            <div class="ring"></div>
-            <div class="ring"></div>
+          <div className="semipolar-spinner">
+            <div className="ring"></div>
+            <div className="ring"></div>
+            <div className="ring"></div>
+            <div className="ring"></div>
+            <div className="ring"></div>
           </div>
         )}
       </div>
