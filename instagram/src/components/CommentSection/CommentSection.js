@@ -13,6 +13,19 @@ class CommentSection extends React.Component {
           time: ''
         }
     }
+    onChange = (e)  => {
+        this.setState(
+            {[e.target.name]: e.target.value})
+    }
+
+    onSubmit = (e) => {
+        e.preventDefault();
+        if(this.state.addComment !== "") {
+            this.addNewComment(this.state.addComment);
+        }
+        e.target.reset();
+    }
+
     addNewComment = (comment) => {
         const newComment = {
             username: "kasia_bondarava",
@@ -20,17 +33,7 @@ class CommentSection extends React.Component {
         }
         this.setState({comments: [...this.state.comments, newComment]});
     }
-    onSubmit = (e) => {
-        e.preventDefault();
-        if(this.state.addComment !== "") {
-            this.addNewComment(this.state.addComment);
-        }
-        this.setState({addComment: ''});
-    }
-    onChange = (e)  => {
-        this.setState(
-            {[e.target.name]: e.target.value})
-    }
+    
     componentDidMount() {
         const date = new Date();
         const time = moment(date).startOf('seconds').fromNow().toUpperCase();
