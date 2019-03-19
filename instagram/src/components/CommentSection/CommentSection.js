@@ -12,7 +12,6 @@ class CommentSection extends React.Component {
           addComment: '',
           time: ''
         }
-        console.log(this.state.comments);
     }
     addNewComment = (comment) => {
         const newComment = {
