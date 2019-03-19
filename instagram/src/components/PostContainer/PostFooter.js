@@ -11,7 +11,7 @@ class PostFooter extends React.Component {
         }
         this.origState = this.state.likes;
     }
-    heartClicked = () => {
+    heartClicked = (e) => {
         if(this.state.likes !== this.origState) {
             this.setState({likes: this.state.likes - 1});
         } else {
