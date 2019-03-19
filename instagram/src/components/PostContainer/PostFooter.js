@@ -9,9 +9,14 @@ class PostFooter extends React.Component {
         this.state = {
           likes: props.likes,
         }
+        this.origState = this.state.likes;
     }
     heartClicked = () => {
-        this.setState({likes: this.state.likes + 1});
+        if(this.state.likes !== this.origState) {
+            this.setState({likes: this.state.likes - 1});
+        } else {
+            this.setState({likes: this.state.likes + 1});
+        }
     }
     render(props) {
         return (
