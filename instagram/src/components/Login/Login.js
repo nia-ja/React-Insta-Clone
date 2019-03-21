@@ -1,5 +1,6 @@
 import React from 'react';
 import logoText from '../../Instagram_logo.svg';
+import './login.css';
 
 class Login extends React.Component {
     onSubmit = (e) => {
@@ -23,13 +24,13 @@ class Login extends React.Component {
                     </form>
                     <p>OR</p>
                     <div className="facebook-login">
-                        <img src="" alt=""/>
+                        <img className="facebook-logo" src="https://img.icons8.com/office/48/000000/facebook.png" />
                         <p>Log in with Facebook</p>
                     </div>
                     <a href="/">Forgot password?</a>
                 </div>
                 <div className="login-sign-up">
-                    <p>Dont't have an account?</p>
+                    <p>Don't have an account?</p>
                     <a href="/">Sign up</a>
                 </div>
             </div>
