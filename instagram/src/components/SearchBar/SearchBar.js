@@ -1,6 +1,5 @@
 import React from "react";
 import Logo from './Logo';
-import './searchBar.css';
 import userIcon from '../../user_icon.svg';
 import compassIcon from '../../compass_icon.svg';
 import heartIcon from '../../heart_icon.svg';
@@ -50,6 +49,15 @@ const IconsWrapper = styled.div `
         }
     }
 `;
+const SearchBarIcon = styled.img `
+    opacity: 0.9;
+    margin-right: 10%;
+    max-height: 30px;
+    &:last-child {
+        margin-right: 0;
+    }
+    ${props => (props.type === 'heart' ? `max-height: 39px` : null)}
+`;
 
 class SearchBar extends React.Component {
     onChange = (e)  => {
@@ -62,9 +70,9 @@ class SearchBar extends React.Component {
                 <Logo />
                 <SearchInput name="inputValue" type="text" placeholder="Search" onChange={this.onChange} />
                 <IconsWrapper>
-                    <img className="search-bar-icon" src={compassIcon} alt="compass icon" />
-                    <img className="search-bar-icon heart-icon" src={heartIcon} alt="heart icon" />
-                    <img className="search-bar-icon user-icon" src={userIcon} alt="user icon" />
+                    <SearchBarIcon src={compassIcon} alt="compass icon" />
+                    <SearchBarIcon type="heart" src={heartIcon} alt="heart icon" />
+                    <SearchBarIcon src={userIcon} alt="user icon" />
                 </IconsWrapper>
             </Header>
         );

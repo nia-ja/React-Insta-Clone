@@ -30,6 +30,7 @@ class PostsPage extends Component {
                     .filter(elem => (elem.username.toLowerCase().indexOf(this.state.filterValue.toLowerCase()) >= 0))
                     .map(elem => (<PostContainer data={elem} key={`${elem.timestamp}${elem.username}`} />))
                 ) : (
+                    // Spinner
                     <div className="semipolar-spinner">
                     <div className="ring"></div>
                     <div className="ring"></div>

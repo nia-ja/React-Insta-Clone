@@ -1,19 +1,35 @@
 import React from "react";
-import './postContainer.css';
 import PostHeader from './PostHeader';
 import PostFooter from './PostFooter';
 import CommentSection from "../CommentSection/CommentSection";
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
+
+const PostWrapper = styled.div `
+    max-width: 600px;
+    margin: 20px auto;
+    border: 1px solid lightgrey;
+    background: white;
+    @media (max-width: 650px) {
+        .post-container {
+            margin: 20px 4%; 
+        }
+    }
+`;
+
+const PostImage = styled.img `
+    width: 100%;
+`;
 
 const PostContainer = (props) => {
     return (
-        <div className="post-container">
+        <PostWrapper>
             <PostHeader src={props.data.thumbnailUrl} alt={`${props.data.username} thumbnail`} username={props.data.username} />
-            <img className="post-image" src={props.data.imageUrl} alt={`${props.data.username} post`}/>
+            <PostImage src={props.data.imageUrl} alt={`${props.data.username} post`} />
             <PostFooter likes={props.data.likes} />
             <CommentSection comments={props.data.comments} date={props.data.timestamp} />
-        </div>
+        </PostWrapper>
     );
 }
 

@@ -1,7 +1,35 @@
 import React from "react";
-import './commentSection.css';
 import Comment from './Comment';
 import moment from 'moment';
+import styled from 'styled-components';
+
+const CommentSectionWrapper = styled.div `
+    width: 100%;
+    padding: 5px 0 0 0;
+`;
+const Timestamp = styled.p `
+    width: 100%;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgb(105, 105, 105);
+    padding-left: 2%;
+`;
+const AddCommentInput = styled.input `
+    width: 100%;
+    margin-top: 15px;
+    padding: 20px;
+    border: none;
+    border-top: 1px solid lightgray;
+    font-size: 1.6rem;
+    background: url(https://randomuser.me/api/portraits/lego/8.jpg) no-repeat scroll 7px 7px;
+    background-size: 5%;
+    background-position-y: center;
+    padding-left: 50px;
+    &:focus {
+        outline: none;
+    }
+`;
 
 
 class CommentSection extends React.Component {
@@ -41,13 +69,13 @@ class CommentSection extends React.Component {
     }
     render(props) {
         return (
-            <div className="comment-section">
+            <CommentSectionWrapper>
                 {this.state.comments.map((comment, index) => (<Comment key={index} comment={comment} />))}
-                <p className="timestamp">{this.state.time}</p>
+                <Timestamp>{this.state.time}</Timestamp>
                 <form onSubmit={this.onSubmit}>
-                    <input className="add-comment-input" type="text" name="addComment" placeholder="Add a comment..." onChange={this.onChange} />
+                    <AddCommentInput name="addComment" placeholder="Add a comment..." onChange={this.onChange} />
                 </form>
-            </div>
+            </CommentSectionWrapper>
         );
     }
 }

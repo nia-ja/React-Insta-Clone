@@ -1,13 +1,21 @@
 import React from "react";
-import './comment.css';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
+const CommentWrapper = styled.div `
+    width: 100%;
+    padding: 10px 2%;
+`;
+const CommentUsername = styled.span `
+    font-weight: bold;
+    margin-right: .6%;
+`;
 
 const Comment = (props) => {
     return (
-        <div className="comment">
-            <p className="comment-text"><span className="comment-username">{props.comment.username}</span>{props.comment.text}</p>
-        </div>
+        <CommentWrapper>
+            <p><CommentUsername>{props.comment.username}</CommentUsername>{props.comment.text}</p>
+        </CommentWrapper>
     );
 }
 
