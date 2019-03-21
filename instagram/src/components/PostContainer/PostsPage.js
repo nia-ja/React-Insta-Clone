@@ -3,7 +3,7 @@ import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
 import dummyData from '../../dummy-data';
 
-export default class PostsPage extends Component {
+class PostsPage extends Component {
     constructor() {
         super();
         this.state = {
@@ -43,3 +43,5 @@ export default class PostsPage extends Component {
         )
     }
 }
+
+export default PostsPage;

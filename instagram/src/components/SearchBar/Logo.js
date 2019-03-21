@@ -6,8 +6,8 @@ import './logo.css';
 const Logo = () => {
     return (
         <div className="logo">
-            <img src={logo} className="app-logo pic-logo" alt="logo" />
-            <img src={logoText} className="app-logo" alt="logo" />
+            <img src={logo} className="app-logo pic-logo" alt="Instagram picture logo" />
+            <img src={logoText} className="app-logo" alt="Instagram text logo" />
         </div>
     );
 }
