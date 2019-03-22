@@ -1,5 +1,6 @@
 import React from 'react';
 import heartIcon from '../../heart_icon.svg';
+import redHeartIcon from '../../heart_icon_red.svg';
 import speechBubbleIcon from '../../speech_bubble_icon.svg';
 import styled from 'styled-components';
 
@@ -35,8 +36,10 @@ class PostFooter extends React.Component {
     heartClicked = (e) => {
         if(this.state.likes !== this.origState) {
             this.setState({likes: this.state.likes - 1});
+            e.target.src = heartIcon;
         } else {
             this.setState({likes: this.state.likes + 1});
+            e.target.src = redHeartIcon;
         }
     }
     render(props) {
