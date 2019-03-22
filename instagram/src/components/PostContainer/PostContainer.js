@@ -28,7 +28,7 @@ const PostContainer = (props) => {
             <PostHeader src={props.data.thumbnailUrl} alt={`${props.data.username} thumbnail`} username={props.data.username} />
             <PostImage src={props.data.imageUrl} alt={`${props.data.username} post`} />
             <PostFooter likes={props.data.likes} />
-            <CommentSection comments={props.data.comments} date={props.data.timestamp} />
+            <CommentSection comments={props.data.comments} date={props.data.timestamp} user={props.user} />
         </PostWrapper>
     );
 }

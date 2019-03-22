@@ -5,22 +5,24 @@ const withAuthenticate = PostsPage => Login =>
         constructor(props) {
               super(props);
               this.state = {
-                loggedIn: false
+                loggedIn: false,
+                username: '',
+                password: ''
               }
         }
         componentDidMount() {
-            const isLogin = localStorage.getItem("username");
-            if (isLogin === 'true') {
-                this.setState({loggedIn: true})
-            } else {
-                this.setState({loggedIn: false})
+            const loginUser = localStorage.getItem("user");
+            const loginPassword = localStorage.getItem("password");
+            if (!localStorage.getItem('user')) {
+                this.setState({ loggedIn: false, username: '', password: '' });
+              } else {
+                this.setState({ loggedIn: true, username: loginUser, password: loginPassword});
             }
         }
 
         render() {
-            if (this.state.loggedIn) return <PostsPage />;
+            if (this.state.loggedIn) return <PostsPage user={this.state.username} />;
             return <Login />;
-      
         }
     }
   

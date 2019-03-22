@@ -28,7 +28,7 @@ class PostsPage extends Component {
                 {this.state.data.length > 0 ? (
                     this.state.data
                     .filter(elem => (elem.username.toLowerCase().indexOf(this.state.filterValue.toLowerCase()) >= 0))
-                    .map(elem => (<PostContainer data={elem} key={`${elem.timestamp}${elem.username}`} />))
+                    .map(elem => (<PostContainer data={elem} key={`${elem.timestamp}${elem.username}`} user={this.props.user} />))
                 ) : (
                     // Spinner
                     <div className="semipolar-spinner">

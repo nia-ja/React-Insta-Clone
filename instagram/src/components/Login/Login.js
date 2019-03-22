@@ -3,28 +3,39 @@ import logoText from '../../Instagram_logo.svg';
 import './login.css';
 
 class Login extends React.Component {
-    onSubmit = (e) => {
-            e.preventDefault();
-            this.login();
-            e.target.reset();
+    constructor(props) {
+        super(props);
+        this.state = {
+          username: '',
+          password: ''
+        };
     }
-    login = () => {
-        localStorage.setItem("username", true);
+
+    onChange = e => {
+        this.setState({ [e.target.name]: e.target.value });
+    };
+
+    onSubmit = (e) => {
+        const user = this.state.username;
+        const password = this.state.password;
+        localStorage.setItem('user', user);
+        localStorage.setItem('password', password);
         window.location.reload(); 
     }
+
     render() {
         return (
             <div className="login-conteiner">
                 <div className="login-main">
-                    <img src={logoText} alt="Instagram text logo"/>
+                    <img src={logoText} alt="Instagram text"/>
                     <form onSubmit={this.onSubmit}>
-                        <input type="text" placeholder="Phone number, username, or email" />
-                        <input type="text" placeholder="Password" />
+                        <input type="text" placeholder="Phone number, username, or email" onChange={this.onChange} value={this.state.username} name="username" />
+                        <input type="text" placeholder="Password" onChange={this.onChange} value={this.state.password} name="password" />
                         <button>Log in</button>
                     </form>
                     <p>OR</p>
                     <div className="facebook-login">
-                        <img className="facebook-logo" src="https://img.icons8.com/office/48/000000/facebook.png" />
+                        <img className="facebook-logo" src="https://img.icons8.com/office/48/000000/facebook.png" alt="White letter F on blue background" />
                         <p>Log in with Facebook</p>
                     </div>
                     <a href="/">Forgot password?</a>
