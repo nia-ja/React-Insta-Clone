@@ -30,7 +30,7 @@ class Login extends React.Component {
                     <img src={logoText} alt="Instagram text"/>
                     <form onSubmit={this.onSubmit}>
                         <input type="text" placeholder="Phone number, username, or email" onChange={this.onChange} value={this.state.username} name="username" required />
-                        <input type="text" placeholder="Password" onChange={this.onChange} value={this.state.password} name="password" required />
+                        <input type="password" placeholder="Password" onChange={this.onChange} value={this.state.password} name="password" required />
                         <button>Log in</button>
                     </form>
                     <p>OR</p>
