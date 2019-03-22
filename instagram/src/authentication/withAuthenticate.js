@@ -19,9 +19,14 @@ const withAuthenticate = PostsPage => Login =>
                 this.setState({ loggedIn: true, username: loginUser, password: loginPassword});
             }
         }
+        onClick = (e) => {
+          localStorage.removeItem("user");
+          localStorage.removeItem("password");
+          window.location.reload();
+        }
 
         render() {
-            if (this.state.loggedIn) return <PostsPage user={this.state.username} />;
+            if (this.state.loggedIn) return <PostsPage user={this.state.username} onClick={this.onClick} />;
             return <Login />;
         }
     }

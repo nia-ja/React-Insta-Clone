@@ -62,8 +62,7 @@ const SearchBarIcon = styled.img `
 class SearchBar extends React.Component {
     onChange = (e)  => {
         this.props.filterUpdate(e.target.value);
-    }
-    
+    } 
     render() {
         return (
             <Header>
@@ -72,7 +71,7 @@ class SearchBar extends React.Component {
                 <IconsWrapper>
                     <SearchBarIcon src={compassIcon} alt="compass icon" />
                     <SearchBarIcon type="heart" src={heartIcon} alt="heart icon" />
-                    <SearchBarIcon src={userIcon} alt="user icon" />
+                    <SearchBarIcon src={userIcon} alt="user icon" onClick={this.props.onClick} />
                 </IconsWrapper>
             </Header>
         );

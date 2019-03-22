@@ -24,7 +24,7 @@ class PostsPage extends Component {
     render(props) {
         return (
             <div className="posts-page">
-                <SearchBar array={this.state.data.map(elem => elem.username)} filterUpdate={this.filterUpdate} />
+                <SearchBar array={this.state.data.map(elem => elem.username)} filterUpdate={this.filterUpdate} onClick={this.props.onClick} />
                 {this.state.data.length > 0 ? (
                     this.state.data
                     .filter(elem => (elem.username.toLowerCase().indexOf(this.state.filterValue.toLowerCase()) >= 0))
