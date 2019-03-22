@@ -1,6 +1,7 @@
 import React from 'react';
 import logoText from '../../Instagram_logo.svg';
 import './login.css';
+import facebookIcon from '../../facebook_icon.svg';
 
 class Login extends React.Component {
     constructor(props) {
@@ -35,7 +36,7 @@ class Login extends React.Component {
                     </form>
                     <p>OR</p>
                     <div className="facebook-login">
-                        <img className="facebook-logo" src="https://img.icons8.com/office/48/000000/facebook.png" alt="White letter F on blue background" />
+                        <img className="facebook-logo" src={facebookIcon} alt="White letter F on blue background" />
                         <p>Log in with Facebook</p>
                     </div>
                     <a href="/">Forgot password?</a>
