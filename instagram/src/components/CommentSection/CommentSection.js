@@ -64,8 +64,7 @@ class CommentSection extends React.Component {
     
     componentDidMount() {
         const date = this.props.date;
-        // new Date();
-        const time = moment(date, "MMMM Do YYYY, hh:mm:ss a ").startOf('seconds').fromNow().toUpperCase();
+        const time = moment(date, "MMMM Do YYYY, hh:mm:ss a").startOf('seconds').fromNow().toUpperCase();
         this.setState({time: time});
     }
     render(props) {
